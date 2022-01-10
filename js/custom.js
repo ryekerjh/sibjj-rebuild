@@ -21,6 +21,8 @@
 
 	$('.schedule-filter li').on('click', function() {
         var tsfilter = $(this).data('tsfilter');
+		$('#instructor-night-thursday').addClass('hide');
+		$('#instructor-night-tuesday').addClass('hide');
         $('.schedule-filter li').removeClass('active');
         $(this).addClass('active');
         if (tsfilter == 'all') {
@@ -31,9 +33,17 @@
         }
         $('.ts-item').each(function() {
             $(this).removeClass('show');
-            if ($(this).data('tsmeta') == tsfilter) {
-                $(this).addClass('show');
-            }
+			$(this).data('tsmeta').split(" ").forEach(d => {
+				if (d == tsfilter) {
+					$(this).addClass('show');
+					if($(this).text().includes("6:30PM - 7:30PM")) {
+						if ($(this).next().text().toLowerCase().includes("august")) {
+							let el = $($(this).next()[0]).find("span");
+							el.hasClass("hide") ? el.removeClass("hide") : el.addClass("hide")
+						}
+					}	
+				}
+			});
         });
     });
 
