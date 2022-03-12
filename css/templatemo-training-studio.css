@@ -556,7 +556,8 @@ header
 
 @media (max-width: 767px) {
   .header-area .main-nav .logo {
-    color: #1e1e1e;
+    background-image: url("../images/index.png");
+    min-height: 50px;
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
@@ -1309,11 +1310,15 @@ preloader
 responsive
 --------------------------------------------- 
 */
+@media (min-width: 768px) and (max-width: 992px) {
+  .header-area .main-nav .logo {
+    background-image: url("../images/logo-white.png");
+  }
+}
 
 @media (max-width: 992px) {
   .header-area .main-nav .logo {
-    background-image: url("../images/Logo_Alliance_Triangle.jpg");
-    height: 50px;
+    min-height: 60px;
     width: 50px;
   }
   .main-banner .caption h2 {
