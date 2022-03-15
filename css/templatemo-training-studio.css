@@ -909,10 +909,17 @@ Our Classes
   margin-bottom: 20px;
   margin-top: 30px;
 }
-.tabs-content p {
+.tabs-content p,
+.tabs-content ul li {
   font-size: 14px;
   color: #7a7a7a;
   margin-bottom: 28px;
+}
+
+#tabs ul.kids-class-benefits li {
+  margin-bottom: 0;
+  list-style-type: circle;
+  display: list-item;
 }
 
 /* 
@@ -938,6 +945,14 @@ schedule
   width: 100%;
   text-align: center;
   border: 1px solid #fff;
+}
+
+#schedule table thead tr td {
+  border-right: 1px solid #fff;
+  padding: 10px 0;
+  font-weight: 900;
+  font-size: 0.9em;
+  text-transform: uppercase;
 }
 
 #schedule table tbody {
@@ -1064,22 +1079,26 @@ trainers
   margin-bottom: 20px;
 }
 
-#trainers .trainer-item ul.social-icons li {
+#trainers .trainer-item ul.social {
+  text-align: center;
+}
+
+#trainers .trainer-item ul.social li {
   display: inline-block;
   margin-right: 12px;
 }
 
-#trainers .trainer-item ul.social-icons li:last-child {
+#trainers .trainer-item ul.social li:last-child {
   margin-right: 0px;
 }
 
-#trainers .trainer-item ul.social-icons li a {
+#trainers .trainer-item ul.social li a {
   color: #232d39;
   transition: all 0.3s;
 }
 
-#trainers .trainer-item ul.social-icons li a:hover {
-  color: var(--accent-color);
+#trainers .trainer-item ul.social li a:hover {
+  color: var(--highlight);
 }
 
 /* 

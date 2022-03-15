@@ -19,7 +19,12 @@
 	});
 	
 
-	$('.schedule-filter li').on('click', function() {
+	$('.schedule-filter li').on('click', function(ev) {
+		if (ev.target.textContent === "Friday") {
+			$('#instructor-kids-friday').removeClass('hide');
+		} else {
+			$('#instructor-kids-friday').addClass('hide');
+		}
         var tsfilter = $(this).data('tsfilter');
 		$('#instructor-night-thursday').addClass('hide');
 		$('#instructor-night-tuesday').addClass('hide');
