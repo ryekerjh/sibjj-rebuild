@@ -98,6 +98,10 @@ figcaption {
   outline: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -984,6 +988,10 @@ schedule
 .schedule-table.filtering .ts-item.show {
   opacity: 1;
   transition: all 0.5s;
+}
+
+.schedule-table tr {
+  scroll-margin-top: 80px;
 }
 
 #schedule .filters {
